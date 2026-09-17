@@ -8,7 +8,7 @@
       .box {
         width: 70px;
         height: 70px;
-        background-color: teal;
+        background-color: rgb(170, 5, 247);
         font-size: 300%;
         text-align: center;
         user-select: none;
@@ -16,7 +16,7 @@
         position: absolute;
         top: 100px;
         /* Change me! */
-        left: 0px;
+        left: 100px;
       }
 
       .board {
@@ -66,8 +66,9 @@ body  {
         box.on("click", handleBoxClick);
 
         // moves the Box to a new position on the screen along the X-Axis
-        function moveBoxTo(newPositionX) {
+        function moveBoxTo(newPositionX,newPositionY) {
           box.css("left", newPositionX);
+          box.css("top", newPositionY);
         }
 
         // changes the text displayed on the Box
@@ -81,8 +82,11 @@ body  {
 
         // TODO 2 - Variable declarations
         var PositionX = 200;
+        var PositionY = 200
         var points = 0;
-        var speed = 5;
+        var speed = 3;
+        var speedy = 3;
+
 
 
 
@@ -92,10 +96,15 @@ body  {
          * If the box drifts off the screen, turn it around!
          */
         function update() {
-          moveBoxTo(PositionX)
+          moveBoxTo(PositionX, PositionY)
           PositionX += speed;
-         if (condition) {speed = speed * -1;
-         }(positionX > boardWidth)
+          Position += speedy;
+         if(PositionX > boardWidth - 50){
+          speed = speed * -1
+         }
+
+         if 
+         
 
 
         
